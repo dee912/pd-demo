@@ -1,16 +1,15 @@
-import React from 'react'
-import axios from 'axios'
+import { BrowserRouter } from 'react-router-dom'
+
+import Home from './components/Home'
+
 
 function App() {
-  React.useEffect(() => {
-    const getData = async () => {
-      const res = await axios.get('/api/endpoint') // * <-- replace with your endpoint
-      console.log(res.data)
-    }
-    getData()
-  })
 
-  return <h1>Hello World</h1>
+  return (
+    <BrowserRouter>
+      <Home />
+    </BrowserRouter>
+  )
 }
 
 export default App
